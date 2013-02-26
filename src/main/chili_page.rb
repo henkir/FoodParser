@@ -1,12 +1,13 @@
+# -*- coding: utf-8 -*-
 require 'food_page'
 
 module FoodParser
 
-  class HusmanPage < FoodPage
+  class ChiliPage < FoodPage
     
     def initialize(page_reader)
       super(page_reader)
-      @page_location = "http://www.restauranghusman.se/veckans.html"
+      @page_location = "http://www.chili-lime.se/helaveckan.asp"
     end
     
     private

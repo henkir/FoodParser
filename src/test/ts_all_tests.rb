@@ -10,3 +10,4 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'tc_page'
 require 'tc_page_reader'
 require 'tc_husman_page'
+require 'tc_chili_page'

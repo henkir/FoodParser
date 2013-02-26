@@ -4,8 +4,7 @@ require 'page_reader'
 require 'test/unit'
 require 'mocha/setup'
 
-module FoodPages
-
+module FoodParser
 
   class TestHusmanPage < Test::Unit::TestCase
 
@@ -14,8 +13,11 @@ module FoodPages
       @husman_page = HusmanPage.new(@page_reader)
       @page_uri = "http://www.restauranghusman.se/veckans.html"
       @wrong_page_uri = "tp://www.restauranghusman.se/veckans.html"
-      @monday = "Måndag"
-      @text = "ABCDEF"
+      @monday = 1
+      file_path = File.expand_path(File.join(File.dirname(__FILE__), "/resources/husman.html"))
+      @text = File.open(file_path) do |file|
+        file.read()
+      end
       @page = Page.new(@text)
     end
 

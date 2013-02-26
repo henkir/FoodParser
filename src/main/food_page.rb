@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-module FoodPages
+module FoodParser
 
   class FoodPage
     
@@ -15,7 +15,8 @@ module FoodPages
     end
 
     def get_text_for(day)
-      @page.find(get_target_match(), get_target_index())
+      @page = @page.find(get_target_match(day), get_target_index())
+      extract_text(@page)
     end
 
   end

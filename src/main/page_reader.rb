@@ -1,31 +1,38 @@
 require 'open-uri'
-require_relative 'page'
+require 'page'
 
-class PageReader
-  
-  def read_page(page_uri)
-    begin
-      page = get_page(page_uri)
-    rescue StandardError => e
-      raise PageNotFound, e
+module FoodParser
+
+  class PageReader
+    
+    def read_page(page_uri)
+      begin
+        wrap_page_from_uri(page_uri)
+      rescue StandardError => e
+        raise PageNotFound, e
+      end
     end
-    if page == ""
-      raise PageNotFound
-    else
-      Page.new(page)
+    
+    private
+    
+    def wrap_page_from_uri(page_uri)
+      page = read_page_from_uri(page_uri)
+      if page == ""
+        raise PageNotFound
+      else
+        Page.new(page)
+      end
     end
+
+    def read_page_from_uri(page_uri)
+      open(page_uri) do |file|
+        file.read()
+      end
+    end
+
+  end
+
+  class PageNotFound < StandardError
   end
   
-  private
-  
-  def get_page(page_uri)
-    open(page_uri) do |file|
-      file.read()
-    end
-  end
-
 end
-
-class PageNotFound < StandardError
-end
-  
