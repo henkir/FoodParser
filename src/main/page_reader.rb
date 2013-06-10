@@ -5,9 +5,9 @@ module FoodParser
 
   class PageReader
     
-    def read_page(page_uri)
+    def read_page(page_uri, encoding = "UTF-8")
       begin
-        wrap_page_from_uri(page_uri)
+        wrap_page_from_uri(page_uri, encoding)
       rescue StandardError => e
         raise PageNotFound, e
       end
@@ -15,17 +15,12 @@ module FoodParser
     
     private
     
-    def wrap_page_from_uri(page_uri)
-      page = read_page_from_uri(page_uri)
-      if page == ""
-        raise PageNotFound
-      else
-        Page.new(page)
-      end
+    def wrap_page_from_uri(page_uri, encoding)
+      Page.new(read_page_from_uri(page_uri, encoding).encode("UTF-8", encoding))
     end
 
-    def read_page_from_uri(page_uri)
-      open(page_uri) do |file|
+    def read_page_from_uri(page_uri, encoding)
+      open(page_uri, "r:#{encoding}") do |file|
         file.read()
       end
     end

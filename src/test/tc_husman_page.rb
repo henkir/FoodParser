@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'husman_page'
 require 'page_reader'
 require 'test/unit'
@@ -14,10 +13,8 @@ module FoodParser
       @page_uri = "http://www.restauranghusman.se/veckans.html"
       @wrong_page_uri = "tp://www.restauranghusman.se/veckans.html"
       @monday = 1
-      file_path = File.expand_path(File.join(File.dirname(__FILE__), "/resources/husman.html"))
-      @text = File.open(file_path) do |file|
-        file.read()
-      end
+      @friday = 5
+      @text = read_file("resources/husman.html")
       @page = Page.new(@text)
     end
 
@@ -35,9 +32,26 @@ module FoodParser
     end
 
     def test_returns_text_for_monday()
+      target_text_monday = read_file("resources/husman_monday.html")
       @page_reader.expects(:read_page).returns(@page)
       @husman_page.read_page()
-      @husman_page.get_text_for(@monday)
+      assert_equal(target_text_monday, @husman_page.get_text_for(@monday))
+    end
+
+    def test_returns_text_for_friday()
+      target_text_monday = read_file("resources/husman_friday.html")
+      @page_reader.expects(:read_page).returns(@page)
+      @husman_page.read_page()
+      assert_equal(target_text_monday, @husman_page.get_text_for(@friday))
+    end
+
+    private
+
+    def read_file(filename)
+      file_path = File.expand_path(File.join(File.dirname(__FILE__), "/", filename))
+      File.open(file_path) do |file|
+        file.read()
+      end
     end
 
   end

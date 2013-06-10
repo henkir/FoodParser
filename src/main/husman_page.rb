@@ -19,15 +19,28 @@ module FoodParser
       @days[day]
     end
 
-    def get_target_index()
+    def get_target_stop(day)
+      if day < 5
+        @days[day + 1]
+      else
+        "DAGENS"
+      end
+    end
+
+    def get_target_index(day)
       0
     end
 
     def extract_text(page)
-      page.parent
-      page.parent
-      page.parent
-      page.next_element.text
+      page.strip_tags()
+      page.consolidate_whitespace()
+      replace_characters(page.text())
+    end
+
+    private
+
+    def replace_characters(text)
+      text.gsub("&amp;", "&").gsub("\u001E", "&").gsub("&nbsp;", " ").gsub(/\s{2,}/, "\n")
     end
 
   end

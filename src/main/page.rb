@@ -1,31 +1,44 @@
-# -*- coding: utf-8 -*-
-require 'nokogiri'
-
 module FoodParser
 
   class Page
 
     def initialize(page_contents)
-      @page = Nokogiri::HTML(page_contents)
+      @page = page_contents
     end
 
-    def find(search_text, match_nr)
-      @current_element = @page.search("[text()*='#{search_text}']")[match_nr]
+    def find(start, stop, match_nr)
+      negated_stop = negate_pattern(stop)
+      matches = @page.match(/#{start}#{negated_stop}#{stop}/)
+      @current_element = matches[match_nr].sub(/#{stop}/, "")
       self
     end
 
-    def parent()
-      @current_element = @current_element.parent()
+    def strip_tags()
+      @current_element.gsub!(/<[^>]*>/, "")
       self
     end
 
-    def next_element()
-      @current_element = @current_element.next_element()
+    def consolidate_whitespace()
+      @current_element.gsub!(/[\t\ ]{2,}/, " ")
+      @current_element.gsub!(/\t/, " ")
+      @current_element.gsub!(/\s{2,}/, "\n")
       self
     end
 
     def text()
-      @current_element.text()
+      @current_element
+    end
+
+    private
+
+    def negate_pattern(pattern)
+      escaped_characters = [ '.', '|', '(', ')', '[', ']', '{', '}',
+                             '+', '\\', '^', '$', '*', '?', '.', '/' ]
+      negated_array = pattern.each_char.map do |char|
+        char = "\#{char}" if escaped_characters.include?(char)
+        char = "[^#{char}]*"
+      end
+      negated_array.join
     end
 
   end
