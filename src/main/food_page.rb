@@ -23,6 +23,9 @@ module FoodParser
       extract_text(@page)
     end
 
+    def get_name()
+    end
+
   end
 
 end

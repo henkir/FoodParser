@@ -12,7 +12,8 @@ module FoodParser
       text = ""
       @food_pages.each do |food_page|
         food_page.read_page()
-        text += food_page.get_text_for(day)
+        text += food_page.get_name() + "\n"
+        text += food_page.get_text_for(day) + "\n"
       end
       text
     end

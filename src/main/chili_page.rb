@@ -8,6 +8,10 @@ module FoodParser
       super(page_reader, "ISO-8859-1")
       @page_location = "http://www.chili-lime.se/helaveckan.asp"
     end
+
+    def get_name()
+      "Chili"
+    end
     
     private
 

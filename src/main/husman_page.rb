@@ -9,6 +9,10 @@ module FoodParser
       @page_location = "http://www.restauranghusman.se/veckans.html"
     end
     
+    def get_name()
+      "Husman"
+    end
+
     private
 
     def get_page_location()
