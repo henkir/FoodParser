@@ -1,9 +1,11 @@
+require 'htmlentities'
+
 module FoodParser
 
   class Page
 
     def initialize(page_contents)
-      @page = page_contents
+      @page = HTMLEntities.new.decode(page_contents)
     end
 
     def find(start, stop, match_nr)
@@ -21,6 +23,7 @@ module FoodParser
     def consolidate_whitespace()
       @current_element.gsub!(/[\t\ ]{2,}/, " ")
       @current_element.gsub!(/\t/, " ")
+      @current_element.gsub!(/#{160.chr(Encoding::UTF_8)}/, " ")
       @current_element.gsub!(/\s{2,}/, "\n")
       self
     end

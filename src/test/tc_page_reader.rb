@@ -1,5 +1,4 @@
 require 'test/unit'
-require 'silence_warnings'
 require 'page_reader'
 
 module FoodParser
