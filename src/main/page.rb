@@ -9,8 +9,7 @@ module FoodParser
     end
 
     def find(start, stop, match_nr)
-      negated_stop = negate_pattern(stop)
-      matches = @page.match(/#{start}#{negated_stop}#{stop}/)
+      matches = @page.match(/#{start}.*?#{stop}/m)
       @current_element = matches[match_nr].sub(/#{stop}/, "")
       self
     end

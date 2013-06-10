@@ -13,6 +13,7 @@ module FoodParser
       @page_uri = "http://www.chili-lime.se/helaveckan.asp"
       @wrong_page_uri = "tp://www.chili-lime.se/helaveckan.asp"
       @monday = 1
+      @thursday = 4
       @friday = 5
       @text = read_file("resources/chili-lime.html")
       @page = Page.new(@text)
@@ -36,6 +37,13 @@ module FoodParser
       @page_reader.expects(:read_page).returns(@page)
       @chili_page.read_page()
       assert_equal(target_text_monday, @chili_page.get_text_for(@monday))
+    end
+
+    def test_returns_text_for_thursday()
+      target_text_thursday = read_file("resources/chili-lime_thursday.html")
+      @page_reader.expects(:read_page).returns(@page)
+      @chili_page.read_page()
+      assert_equal(target_text_thursday, @chili_page.get_text_for(@thursday))
     end
 
     def test_returns_text_for_friday()

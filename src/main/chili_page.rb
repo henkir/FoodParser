@@ -38,7 +38,7 @@ module FoodParser
     end
 
     def replace_characters(text)
-      text.gsub(/\d+\./, "").gsub("&amp;", "&").gsub("&nbsp;", " ").gsub(/\s{2,}/, "\n")
+      text.gsub(/\d+\./, "").gsub("&amp;", "&").gsub(/\s{2,}/, "\n")
     end
 
   end
