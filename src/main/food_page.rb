@@ -23,6 +23,13 @@ module FoodParser
       extract_text(@page)
     end
 
+    def get_array_for(day)
+      text = get_text_for(day)
+      items = text.split("\n")
+      items.shift
+      items
+    end
+
     def get_name()
     end
 
