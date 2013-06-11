@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-require 'date'
 
 module FoodParser
   class HtmlGenerator
@@ -24,15 +23,7 @@ module FoodParser
     end
 
     def add_header()
-      day = Date.today
-      time = Time.new
-      if time.hour > 3
-        day += 1
-      end
-      expire_time = day.to_time
-      expire_time += 3 * 60 * 60
-      @@header.gsub(/EXPIRE_TIME/, 
-                    expire_time.gmtime.strftime('%a, %-d %b %Y %T GMT'))
+      @@header
     end
 
     def add_day(day)
@@ -80,8 +71,6 @@ module FoodParser
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta http-equiv="Cache-Control" content="Public" />
-    <meta http-equiv="Expires" content="EXPIRE_TIME" />
     <title>Lunchmeny</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
