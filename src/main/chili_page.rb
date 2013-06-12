@@ -45,6 +45,10 @@ module FoodParser
       text.gsub(/\d+\./, "").gsub("&amp;", "&").gsub(/\s{2,}/, "\n")
     end
 
+    def remove_unwanted_items(items)
+      items.delete_if { |item| item =~ /^VEG/ }
+    end
+
   end
 
 end

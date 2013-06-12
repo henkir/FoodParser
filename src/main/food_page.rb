@@ -27,10 +27,17 @@ module FoodParser
       text = get_text_for(day)
       items = text.split("\n")
       items.shift
+      items = remove_unwanted_items(items)
       items
     end
 
     def get_name()
+    end
+
+    private
+
+    def remove_unwanted_items(items)
+      items
     end
 
   end

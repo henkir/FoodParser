@@ -47,6 +47,10 @@ module FoodParser
       text.gsub("&amp;", "&").gsub("\u001E", "&").gsub("&nbsp;", " ").gsub(/\s{2,}/, "\n")
     end
 
+    def remove_unwanted_items(items)
+      items.delete_if { |item| item =~ /^Grill:/ }
+    end
+
   end
 
 end
