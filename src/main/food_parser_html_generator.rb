@@ -1,14 +1,15 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-if ARGV.length != 1
-  puts "Requires day number as argument"
-  exit 1
+day = -1
+if ARGV.length == 0
+  day = Time.new.wday
+else
+  day = ARGV[0].to_i
 end
-day = ARGV[0].to_i
 if day < 1 || day > 5
   puts "Day must be between 1 and 5"
-  exit 2
+  exit 1
 end
 
 require 'food_parser_factory'
