@@ -70,18 +70,40 @@ module FoodParser
     end
 
     def add_randomizer()
+      checkboxes = add_checkboxes()
       js_array = add_js_array()
-      "
-      <script type=\"text/javascript\">
-        function chooseRestaurant() {
-          #{js_array}
-          index=Math.floor(Math.random()*restaurants.length);
-          document.getElementById(\"chosen\").innerHTML = restaurants[index];
-        }
-      </script>
-      <button onclick=\"chooseRestaurant()\">Slumpa</button>
-      <div id=\"chosen\"></div>
+      "      <div id=\"choose\">
+        <h2>Slumpa restaurang</h2>
+        #{checkboxes}
+        <script type=\"text/javascript\">
+          function chooseRestaurant() {
+            var checkedRestaurants = [];
+            var allRestaurants = document.forms[0].elements;
+            for (var i = 0; i < allRestaurants.length; i++ ) {
+               if(allRestaurants[i].checked == true) {
+                 checkedRestaurants[checkedRestaurants.length] = allRestaurants[i];
+               }
+            }
+            index=Math.floor(Math.random()*checkedRestaurants.length);
+            document.getElementById(\"chosen\").innerHTML = checkedRestaurants[index].value;
+          }
+        </script>
+        <button onclick=\"chooseRestaurant()\">Slumpa</button>
+        <div id=\"chosen\"></div>
+      </div>
 "
+    end
+
+    def add_checkboxes()
+      page_names = []
+      @pages.each { |page| page_names.push(page.get_name()) }
+      indent = "        "
+      checkboxes = "#{indent}<form>\n"
+      page_names.each_index do |i|
+        checkboxes += "#{indent}  <input type=\"checkbox\" id=\"restaurant#{i}\" checked=\"checked\" value=\"#{page_names[i]}\" /> #{page_names[i]}<br />\n"
+      end
+      checkboxes += "#{indent}</form>"
+      checkboxes
     end
 
     def add_js_array()
