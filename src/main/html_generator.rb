@@ -74,7 +74,7 @@ module FoodParser
       js_array = add_js_array()
       "      <div id=\"choose\">
         <h2>Slumpa restaurang</h2>
-        #{checkboxes}
+#{checkboxes}
         <script type=\"text/javascript\">
           function chooseRestaurant() {
             var checkedRestaurants = [];
