@@ -16,6 +16,7 @@ require 'food_parser_factory'
 require 'husman_page'
 require 'chili_page'
 require 'cominn_page'
+require 'brodernas_page'
 require 'page_reader'
 require 'html_generator'
 
@@ -23,8 +24,10 @@ include FoodParser
 husman = HusmanPage.new(PageReader.new())
 chili = ChiliPage.new(PageReader.new())
 cominn = ComInnPage.new(PageReader.new())
+brodernas = BrodernasPage.new(PageReader.new())
 husman.read_page()
 chili.read_page()
 cominn.read_page()
-pages = [ husman, chili, cominn ]
+brodernas.read_page()
+pages = [ husman, chili, cominn, brodernas ]
 puts HtmlGenerator.new(pages, day).html()
