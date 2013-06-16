@@ -20,9 +20,9 @@ module FoodParser
     end
 
     def consolidate_whitespace()
+      @current_element.gsub!(/#{160.chr(Encoding::UTF_8)}/, " ")
       @current_element.gsub!(/[\t\ ]{2,}/, " ")
       @current_element.gsub!(/\t/, " ")
-      @current_element.gsub!(/#{160.chr(Encoding::UTF_8)}/, " ")
       @current_element.gsub!(/\s{2,}/, "\n")
       self
     end
