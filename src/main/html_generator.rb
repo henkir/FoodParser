@@ -4,7 +4,8 @@ module FoodParser
   class HtmlGenerator
 
     def initialize(pages, day)
-      @html = generate_html(pages, day)
+      @pages = pages
+      @html = generate_html(day)
     end
 
     def html()
@@ -13,10 +14,10 @@ module FoodParser
 
     private
 
-    def generate_html(pages, day)
+    def generate_html(day)
       html = add_header()
       html += add_day(day)
-      pages.each do |page|
+      @pages.each do |page|
         html += add_page(page, day)
       end
       html += add_footer()
@@ -63,7 +64,35 @@ module FoodParser
     end
 
     def add_footer()
-      @@footer
+      html = add_randomizer()
+      html += @@footer
+      html
+    end
+
+    def add_randomizer()
+      js_array = add_js_array()
+      "
+      <script type=\"text/javascript\">
+        function chooseRestaurant() {
+          #{js_array}
+          index=Math.floor(Math.random()*restaurants.length);
+          document.getElementById(\"chosen\").innerHTML = restaurants[index];
+        }
+      </script>
+      <button onclick=\"chooseRestaurant()\">Slumpa</button>
+      <div id=\"chosen\"></div>
+"
+    end
+
+    def add_js_array()
+      page_names = []
+      @pages.each { |page| page_names.push(page.get_name()) }
+      js_array = "var restaurants = new Array();\n"
+      indent = "          "
+      page_names.each_index do |i|
+        js_array += "#{indent}restaurants[#{i}] = \"#{page_names[i]}\";\n"
+      end
+      js_array
     end
 
     @@header =
