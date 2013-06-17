@@ -75,7 +75,41 @@ module FoodParser
       "      <div id=\"choose\">
         <h2>Slumpa restaurang</h2>
 #{checkboxes}
-        <script type=\"text/javascript\">
+        <script type=\"text/javascript\" onload=\"checkCookie()\">
+          function uncheckRestaurants() {
+            var allRestaurants = document.forms[0].elements;
+            for (var i = 0; i < allRestaurants.length; i++) {
+alert(i);
+              allRestaurants[i].checked = false;
+            }
+          }
+          function checkRestaurants() {
+            var allRestaurants = document.forms[0].elements;
+            var cookie = \"\";
+            for (var i = 0; i < allRestaurants.length; i++) {
+alert(i);
+              if (allRestaurants[i].checked) {
+                cookie += i;
+              }
+            }
+            if (cookie != \"\") {
+              document.cookie = cookie;
+            }
+          }
+          function checkCookie() {
+            if (document.cookie != null && document.cookie != \"\") {
+              uncheckRestaurants();
+              parts = document.cookie.split(\" \")
+              var allRestaurants = document.forms[0].elements;
+              for (var i = 0; i < parts.length; i++) {
+                var index = parseInt(parts[i]);
+                if (index >= 0 && index < allRestaurants.length) {
+                  var restaurant = allRestaurants[index];
+                  restaurant.checked = true;
+                }
+              }
+            }
+          }
           function chooseRestaurant() {
             var checkedRestaurants = [];
             var allRestaurants = document.forms[0].elements;
@@ -100,7 +134,7 @@ module FoodParser
       indent = "        "
       checkboxes = "#{indent}<form>\n"
       page_names.each_index do |i|
-        checkboxes += "#{indent}  <input type=\"checkbox\" id=\"restaurant#{i}\" checked=\"checked\" value=\"#{page_names[i]}\" /> #{page_names[i]}<br />\n"
+        checkboxes += "#{indent}  <input type=\"checkbox\" id=\"restaurant#{i}\" checked=\"checked\" value=\"#{page_names[i]}\" onclick=\"checkRestaurant()\" /> #{page_names[i]}<br />\n"
       end
       checkboxes += "#{indent}</form>"
       checkboxes
