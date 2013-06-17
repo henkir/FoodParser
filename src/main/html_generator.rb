@@ -75,53 +75,12 @@ module FoodParser
       "      <div id=\"choose\">
         <h2>Slumpa restaurang</h2>
 #{checkboxes}
-        <script type=\"text/javascript\" onload=\"checkCookie()\">
-          function uncheckRestaurants() {
-            var allRestaurants = document.forms[0].elements;
-            for (var i = 0; i < allRestaurants.length; i++) {
-              allRestaurants[i].checked = false;
-            }
-          }
-          function checkRestaurants() {
-            var allRestaurants = document.forms[0].elements;
-            var cookie = \"\";
-            for (var i = 0; i < allRestaurants.length; i++) {
-              if (allRestaurants[i].checked) {
-                cookie += i;
-              }
-            }
-            if (cookie != \"\") {
-              document.cookie = cookie;
-            }
-          }
-          function checkCookie() {
-            if (document.cookie != null && document.cookie != \"\") {
-              uncheckRestaurants();
-              parts = document.cookie.split(\" \")
-              var allRestaurants = document.forms[0].elements;
-              for (var i = 0; i < parts.length; i++) {
-                var index = parseInt(parts[i]);
-                if (index >= 0 && index < allRestaurants.length) {
-                  var restaurant = allRestaurants[index];
-                  restaurant.checked = true;
-                }
-              }
-            }
-          }
-          function chooseRestaurant() {
-            var checkedRestaurants = [];
-            var allRestaurants = document.forms[0].elements;
-            for (var i = 0; i < allRestaurants.length; i++ ) {
-               if(allRestaurants[i].checked == true) {
-                 checkedRestaurants[checkedRestaurants.length] = allRestaurants[i];
-               }
-            }
-            index=Math.floor(Math.random()*checkedRestaurants.length);
-            document.getElementById(\"chosen\").innerHTML = checkedRestaurants[index].value;
-          }
-        </script>
+
         <button onclick=\"chooseRestaurant()\">Slumpa</button>
         <div id=\"chosen\"></div>
+        <script type=\"text/javascript\">
+          loadCheckedRestaurants();
+        </script>
       </div>
 "
     end
@@ -132,7 +91,7 @@ module FoodParser
       indent = "        "
       checkboxes = "#{indent}<form>\n"
       page_names.each_index do |i|
-        checkboxes += "#{indent}  <input type=\"checkbox\" id=\"restaurant#{i}\" checked=\"checked\" value=\"#{page_names[i]}\" onclick=\"checkRestaurant()\" /> #{page_names[i]}<br />\n"
+        checkboxes += "#{indent}  <input type=\"checkbox\" id=\"restaurant#{i}\" checked=\"checked\" value=\"#{page_names[i]}\" onclick=\"checkRestaurants()\" /> #{page_names[i]}<br />\n"
       end
       checkboxes += "#{indent}</form>"
       checkboxes
@@ -157,6 +116,7 @@ module FoodParser
     <meta name="HandheldFriendly" content="True" />
     <title>Lunchmeny</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js" type="text/javascript"></script>
   </head>
   <body>
     <div>
