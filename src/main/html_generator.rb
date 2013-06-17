@@ -79,7 +79,6 @@ module FoodParser
           function uncheckRestaurants() {
             var allRestaurants = document.forms[0].elements;
             for (var i = 0; i < allRestaurants.length; i++) {
-alert(i);
               allRestaurants[i].checked = false;
             }
           }
@@ -87,7 +86,6 @@ alert(i);
             var allRestaurants = document.forms[0].elements;
             var cookie = \"\";
             for (var i = 0; i < allRestaurants.length; i++) {
-alert(i);
               if (allRestaurants[i].checked) {
                 cookie += i;
               }
