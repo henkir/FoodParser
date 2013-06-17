@@ -76,7 +76,7 @@ module FoodParser
         <h2>Slumpa restaurang</h2>
 #{checkboxes}
 
-        <button onclick=\"chooseRestaurant()\">Slumpa</button>
+        <button onclick=\"randomizeRestaurant()\">Slumpa</button>
         <div id=\"chosen\"></div>
         <script type=\"text/javascript\">
           loadCheckedRestaurants();
@@ -95,17 +95,6 @@ module FoodParser
       end
       checkboxes += "#{indent}</form>"
       checkboxes
-    end
-
-    def add_js_array()
-      page_names = []
-      @pages.each { |page| page_names.push(page.get_name()) }
-      js_array = "var restaurants = new Array();\n"
-      indent = "          "
-      page_names.each_index do |i|
-        js_array += "#{indent}restaurants[#{i}] = \"#{page_names[i]}\";\n"
-      end
-      js_array
     end
 
     @@header =
