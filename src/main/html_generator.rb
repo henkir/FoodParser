@@ -71,7 +71,6 @@ module FoodParser
 
     def add_randomizer()
       checkboxes = add_checkboxes()
-      js_array = add_js_array()
       "      <div id=\"choose\">
         <h2>Slumpa restaurang</h2>
 #{checkboxes}
