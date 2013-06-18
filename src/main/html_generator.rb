@@ -90,7 +90,7 @@ module FoodParser
       indent = "        "
       checkboxes = "#{indent}<form>\n"
       page_names.each_index do |i|
-        checkboxes += "#{indent}  <input type=\"checkbox\" checked=\"checked\" onclick=\"storeCheckedRestaurants()\" /> #{page_names[i]}<br />\n"
+        checkboxes += "#{indent}  <input type=\"checkbox\" checked=\"checked\" value=\"#{page_names[i]}\" onclick=\"storeCheckedRestaurants()\" /> #{page_names[i]}<br />\n"
       end
       checkboxes += "#{indent}</form>"
       checkboxes
