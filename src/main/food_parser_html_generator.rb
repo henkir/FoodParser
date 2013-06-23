@@ -25,9 +25,6 @@ husman = HusmanPage.new(PageReader.new())
 chili = ChiliPage.new(PageReader.new())
 cominn = ComInnPage.new(PageReader.new())
 brodernas = BrodernasPage.new(PageReader.new())
-husman.read_page()
-chili.read_page()
-cominn.read_page()
-brodernas.read_page()
 pages = [ husman, chili, cominn, brodernas ]
+pages.each { |page| page.read_page() }
 puts HtmlGenerator.new(pages, day).html()
