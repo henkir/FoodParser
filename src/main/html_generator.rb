@@ -18,7 +18,8 @@ module FoodParser
     private
 
     def generate_html()
-      html = Haml::Engine.new(File.read('/home/henrik/repository/food_parser/src/main/lunch.html.haml'))
+      filepath = File.expand_path(File.join(File.dirname(__FILE__), "/", "lunch.html.haml"))
+      html = Haml::Engine.new(File.read(filepath))
       html.render(self)
     end
 
