@@ -15,12 +15,27 @@ module FoodParser
       "Brödernas kök"
     end
 
+    def fetch_tmp_page()
+      if !wget_page()
+        raise IOError, "Failed to execute wget, got #{$?.exitstatus}"
+      end
+      if !pdf_to_text()
+        raise StandardError, "Failed to execute pdftotext, got #{$?.exitstatus}"
+      end
+    end      
+
     private
 
-    def get_page_location()
-      system("wget --output-document=/tmp/MenyBrodernas.pdf #{@page_location}")
+    def wget_page()
+      system("wget --quiet --output-document=/tmp/MenyBrodernas.pdf #{@page_location}")
+    end
+
+    def pdf_to_text()
       system("pdftotext /tmp/MenyBrodernas.pdf /tmp/MenyBrodernas.txt")
-      @page_tmp_location
+    end
+
+    def get_page_location()
+      @page_location
     end
     
     def get_page_tmp_location()

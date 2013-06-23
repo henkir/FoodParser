@@ -15,5 +15,13 @@ chili = ChiliPage.new(PageReader.new())
 cominn = ComInnPage.new(PageReader.new())
 brodernas = BrodernasPage.new(PageReader.new())
 pages = [ husman, chili, cominn, brodernas ]
-pages.each { |page| page.fetch_tmp_page() }
-
+threads = []
+pages.each do |page|
+  thread = Thread.new do
+    page.fetch_tmp_page()
+  end
+  threads.push(thread)
+end
+threads.each do |thread|
+  thread.join()
+end
