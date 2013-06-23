@@ -8,6 +8,7 @@ module FoodParser
     def initialize(page_reader)
       super(page_reader)
       @page_location = "http://www.cominn.nu/veckans-meny/"
+      @page_tmp_location = "/tmp/cominn_page.html"
     end
     
     def get_name()
@@ -18,6 +19,10 @@ module FoodParser
 
     def get_page_location()
       @page_location
+    end
+
+    def get_page_tmp_location()
+      @page_tmp_location
     end
     
     def get_target_match(day)

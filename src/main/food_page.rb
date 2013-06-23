@@ -11,6 +11,17 @@ module FoodParser
       @encoding = encoding
     end
 
+    def fetch_tmp_page()
+      page = @page_reader.read_raw_page(get_page_location(), @encoding)
+      File.open(get_page_tmp_location(), "w:#{@encoding}") do |file|
+        file.write(page)
+      end
+    end
+
+    def read_tmp_page()
+      @page = @page_reader.read_page(get_page_tmp_location(), @encoding)
+    end
+
     def read_page()
       @page = @page_reader.read_page(get_page_location(), @encoding)
     end

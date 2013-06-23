@@ -1,17 +1,6 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-day = -1
-if ARGV.length == 0
-  day = Time.new.wday
-else
-  day = ARGV[0].to_i
-end
-if day < 1 || day > 5
-  puts "Day must be between 1 and 5"
-  exit 1
-end
-
 require 'food_parser_factory'
 require 'husman_page'
 require 'chili_page'
@@ -26,5 +15,5 @@ chili = ChiliPage.new(PageReader.new())
 cominn = ComInnPage.new(PageReader.new())
 brodernas = BrodernasPage.new(PageReader.new())
 pages = [ husman, chili, cominn, brodernas ]
-pages.each { |page| page.read_tmp_page() }
-puts HtmlGenerator.new(pages, day).html()
+pages.each { |page| page.fetch_tmp_page() }
+

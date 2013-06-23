@@ -23,6 +23,10 @@ module FoodParser
       @page_tmp_location
     end
     
+    def get_page_tmp_location()
+      @page_tmp_location
+    end
+
     def get_target_match(day)
       @days[day]
     end

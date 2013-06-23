@@ -10,25 +10,25 @@ module FoodParser
 
     def find(start, stop, match_nr)
       matches = @page.match(/#{start}.*?#{stop}/m)
-      @current_element = matches[match_nr].sub(/#{stop}/, "")
+      @text = matches[match_nr].sub(/#{stop}/, "")
       self
     end
 
     def strip_tags()
-      @current_element.gsub!(/<[^>]*>/, "")
+      @text.gsub!(/<[^>]*>/, "")
       self
     end
 
     def consolidate_whitespace()
-      @current_element.gsub!(/#{160.chr(Encoding::UTF_8)}/, " ")
-      @current_element.gsub!(/[\t\ ]{2,}/, " ")
-      @current_element.gsub!(/\t/, " ")
-      @current_element.gsub!(/\s{2,}/, "\n")
+      @text.gsub!(/#{160.chr(Encoding::UTF_8)}/, " ")
+      @text.gsub!(/[\t\ ]{2,}/, " ")
+      @text.gsub!(/\t/, " ")
+      @text.gsub!(/\s{2,}/, "\n")
       self
     end
 
     def text()
-      @current_element
+      @text
     end
 
     private

@@ -7,6 +7,7 @@ module FoodParser
     def initialize(page_reader)
       super(page_reader, "ISO-8859-1")
       @page_location = "http://www.chili-lime.se/helaveckan.asp"
+      @page_tmp_location = "/tmp/chili_page.html"
     end
 
     def get_name()
@@ -19,6 +20,10 @@ module FoodParser
       @page_location
     end
     
+    def get_page_tmp_location()
+      @page_tmp_location
+    end
+
     def get_target_match(day)
       @days[day]
     end

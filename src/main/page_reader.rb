@@ -5,6 +5,14 @@ module FoodParser
 
   class PageReader
     
+    def read_raw_page(page_uri, encoding = "UTF-8")
+      begin
+        read_page_from_uri(page_uri, encoding)
+      rescue StandardError => e
+        raise PageNotFound, e
+      end
+    end
+
     def read_page(page_uri, encoding = "UTF-8")
       begin
         wrap_page_from_uri(page_uri, encoding)
