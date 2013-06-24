@@ -36,10 +36,6 @@ module FoodParser
       end
     end
 
-    def get_target_index(day)
-      0
-    end
-
     def extract_text(page)
       page.strip_tags()
       page.consolidate_whitespace()

@@ -34,17 +34,18 @@ module FoodParser
     end
 
     def test_finds_text()
-      @page.find(@start_text, @stop_text, 0)
-      assert_equal(@target_text, @page.text())
+      page = Page.new("ABC")
+      page.find("A", "C")
+      assert_equal("AB", page.text())
     end
 
     def test_strips_text()
-      @page.find(@start_text, @stop_text, 0)
+      @page.find(@start_text, @stop_text)
       assert_equal(@stripped_target_text, @page.strip_tags().text())
     end
 
     def test_consolidates_whitespace()
-      @page.find(@start_text, @stop_text, 0).strip_tags()
+      @page.find(@start_text, @stop_text).strip_tags()
       assert_equal(@trimmed_target_text, @page.consolidate_whitespace().text())
     end
 

@@ -8,9 +8,9 @@ module FoodParser
       @page = HTMLEntities.new.decode(page_contents)
     end
 
-    def find(start, stop, match_nr)
+    def find(start, stop)
       matches = @page.match(/#{start}.*?#{stop}/m)
-      @text = matches[match_nr].sub(/#{stop}/, "")
+      @text = matches[0].sub(/#{stop}/, "")
       self
     end
 
