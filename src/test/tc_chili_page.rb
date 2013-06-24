@@ -1,3 +1,4 @@
+require 'tc_food_page'
 require 'chili_page'
 require 'page_reader'
 require 'test/unit'
@@ -5,7 +6,7 @@ require 'mocha/setup'
 
 module FoodParser
 
-  class TestChiliPage < Test::Unit::TestCase
+  class TestChiliPage < TestFoodPage
 
     def setup()
       @page_reader = PageReader.new()
@@ -15,7 +16,7 @@ module FoodParser
       @monday = 1
       @thursday = 4
       @friday = 5
-      @text = read_file("resources/chili-lime.html")
+      @text = read_file("resources/chili-lime.html", "ISO-8859-1")
       @page = Page.new(@text)
     end
 
@@ -33,33 +34,24 @@ module FoodParser
     end
 
     def test_returns_text_for_monday()
-      target_text_monday = read_file("resources/chili-lime_monday.html")
+      target_text_monday = read_file("resources/chili-lime_monday.html", "ISO-8859-1")
       @page_reader.expects(:read_page).returns(@page)
       @chili_page.read_page()
       assert_equal(target_text_monday, @chili_page.get_text_for(@monday))
     end
 
     def test_returns_text_for_thursday()
-      target_text_thursday = read_file("resources/chili-lime_thursday.html")
+      target_text_thursday = read_file("resources/chili-lime_thursday.html", "ISO-8859-1")
       @page_reader.expects(:read_page).returns(@page)
       @chili_page.read_page()
       assert_equal(target_text_thursday, @chili_page.get_text_for(@thursday))
     end
 
     def test_returns_text_for_friday()
-      target_text_friday = read_file("resources/chili-lime_friday.html")
+      target_text_friday = read_file("resources/chili-lime_friday.html", "ISO-8859-1")
       @page_reader.expects(:read_page).returns(@page)
       @chili_page.read_page()
       assert_equal(target_text_friday, @chili_page.get_text_for(@friday))
-    end
-
-    private
-
-    def read_file(filename)
-      file_path = File.expand_path(File.join(File.dirname(__FILE__), "/", filename))
-      File.open(file_path, "r:ISO-8859-1") do |file|
-        file.read().encode("UTF-8", "ISO-8859-1")
-      end
     end
 
   end

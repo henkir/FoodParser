@@ -1,3 +1,4 @@
+require 'tc_food_page'
 require 'cominn_page'
 require 'page_reader'
 require 'test/unit'
@@ -5,7 +6,7 @@ require 'mocha/setup'
 
 module FoodParser
 
-  class TestComInnPage < Test::Unit::TestCase
+  class TestComInnPage < TestFoodPage
 
     def setup()
       @page_reader = PageReader.new()
@@ -43,15 +44,6 @@ module FoodParser
       @page_reader.expects(:read_page).returns(@page)
       @cominn_page.read_page()
       assert_equal(target_text_monday, @cominn_page.get_text_for(@friday))
-    end
-
-    private
-
-    def read_file(filename)
-      file_path = File.expand_path(File.join(File.dirname(__FILE__), "/", filename))
-      File.open(file_path) do |file|
-        file.read()
-      end
     end
 
   end

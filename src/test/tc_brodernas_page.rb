@@ -1,3 +1,4 @@
+require 'tc_food_page'
 require 'brodernas_page'
 require 'page_reader'
 require 'test/unit'
@@ -10,7 +11,7 @@ end
 
 module FoodParser
 
-  class TestBrodernasPage < Test::Unit::TestCase
+  class TestBrodernasPage < TestFoodPage
 
     def setup()
       @page_reader = PageReader.new()
@@ -48,15 +49,6 @@ module FoodParser
       @page_reader.expects(:read_page).returns(@page)
       @brodernas_page.read_page()
       assert_equal(target_text_monday, @brodernas_page.get_text_for(@friday))
-    end
-
-    private
-
-    def read_file(filename)
-      file_path = File.expand_path(File.join(File.dirname(__FILE__), "/", filename))
-      File.open(file_path) do |file|
-        file.read()
-      end
     end
 
   end
