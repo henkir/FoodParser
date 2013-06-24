@@ -13,6 +13,10 @@ module FoodParser
       @page.match(/#{start}.*?#{stop}/m)[0].sub(/#{stop}/, "")
     end
 
+    def to_s
+      @page
+    end
+
   end
 
 end

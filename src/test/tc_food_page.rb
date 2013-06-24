@@ -38,14 +38,6 @@ module FoodParser
       assert_equal(@page, page)
     end
 
-    def test_throws_exception_when_malformed_uri()
-      return if @food_page.nil?
-      @page_reader.expects(:read_page).raises(PageNotFound)
-      assert_raise(PageNotFound) do
-        @food_page.read_page()
-      end
-    end
-
     def returns_text_for_day(day, target_text)
       @page_reader.expects(:read_page).returns(@page)
       @food_page.read_page()

@@ -1,5 +1,9 @@
-require 'test/unit'
 require 'page_reader'
+require 'test/unit'
+
+def open(uri, encoding)
+  "ABC"
+end
 
 module FoodParser
 
@@ -7,20 +11,19 @@ module FoodParser
 
     def setup
       @page_reader = PageReader.new()
-      @page_uri = "http://www.restauranghusman.se/veckans.html"
-      @wrong_page_uri = "tp://www.restauranghusman.se/veckans.html"
+      @page_uri = "A"
     end
 
-    def test_returnsWebPage()
+    def test_returns_page()
       page = @page_reader.read_page(@page_uri, "UTF-8")
-      assert(page != "")
+      assert_equal("ABC", page.to_s)
     end
-    
-    def test_throwsExceptionWhenMalformedUri()
-      assert_raise(PageNotFound) do
-        @page_reader.read_page(@wrong_page_uri, "UTF-8")
-      end
+
+    def test_returns_raw_page()
+      page = @page_reader.read_raw_page(@page_uri, "UTF-8")
+      assert_equal("ABC", page)
     end
+
 
   end
 
