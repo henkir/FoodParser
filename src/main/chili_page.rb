@@ -36,10 +36,9 @@ module FoodParser
       end
     end
 
-    def extract_text(page)
-      page.strip_tags()
-      page.consolidate_whitespace()
-      replace_characters(page.text())
+    def extract_text(text)
+      text = text.strip_tags().consolidate_whitespace()
+      replace_characters(text)
     end
 
     def replace_characters(text)

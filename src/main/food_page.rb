@@ -29,8 +29,8 @@ module FoodParser
     def get_text_for(day)
       start_match = get_target_match(day)
       stop_match = get_target_stop(day)
-      @page.find(start_match, stop_match)
-      extract_text(@page)
+      text = @page.find(start_match, stop_match)
+      extract_text(text)
     end
 
     def get_array_for(day)

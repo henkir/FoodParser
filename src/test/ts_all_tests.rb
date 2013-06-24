@@ -7,6 +7,7 @@ $VERBOSE = 2
 $LOAD_PATH.unshift(File.dirname(__FILE__) + "/../main")
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
+require 'tc_string'
 require 'tc_page'
 require 'tc_page_reader'
 require 'tc_husman_page'
