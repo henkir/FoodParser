@@ -33,7 +33,7 @@ module FoodParser
       if day < 5
         @days[day + 1]
       else
-        "Skriv ut veckans meny"
+        "Salladsbuff"
       end
     end
 
