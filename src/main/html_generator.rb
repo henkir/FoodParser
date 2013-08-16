@@ -34,7 +34,19 @@ module FoodParser
     end
 
     def get_page_items(page)
-      page.get_array_for(@day)
+      begin
+        page.get_array_for(@day)
+      rescue => err
+        log_to_file(err)
+        ["Ett fel uppstod vid parsning av sidan"]
+      end
+    end
+
+    def log_to_file(error)
+      File.open("/tmp/food_parser.log", 'a') do |file|
+        backtrace = error.backtrace.join("\n")
+        file.write("#{Time.new} #{error.message} Stacktrace:\n#{backtrace}")
+      end
     end
 
   end
