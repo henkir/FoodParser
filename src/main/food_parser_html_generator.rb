@@ -21,10 +21,18 @@ require 'page_reader'
 require 'html_generator'
 
 include FoodParser
-husman = HusmanPage.new(PageReader.new())
-chili = ChiliPage.new(PageReader.new())
-cominn = ComInnPage.new(PageReader.new())
-brodernas = BrodernasPage.new(PageReader.new())
-pages = [ husman, chili, cominn, brodernas ]
-pages.each { |page| page.read_tmp_page() }
-puts HtmlGenerator.new(pages, day).html()
+
+begin
+  husman = HusmanPage.new(PageReader.new())
+  chili = ChiliPage.new(PageReader.new())
+  cominn = ComInnPage.new(PageReader.new())
+  brodernas = BrodernasPage.new(PageReader.new())
+  pages = [ husman, chili, cominn, brodernas ]
+  pages.each { |page| page.read_tmp_page() }
+  puts HtmlGenerator.new(pages, day).html()
+rescue => error
+  File.open("/tmp/food_parser.log", 'a') do |file|
+    backtrace = error.backtrace.join("\n")
+    file.write("#{Time.new} #{error.message} Stacktrace:\n#{backtrace}")
+  end
+end
