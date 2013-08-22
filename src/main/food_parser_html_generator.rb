@@ -1,12 +1,23 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
+class String
+  def to_b
+    self =~ /^(true|t|yes|y|1)$/i
+  end
+end
+
 day = -1
+today = true
 if ARGV.length == 0
   day = Time.new.wday
 else
   day = ARGV[0].to_i
+  if ARGV.length >= 2
+    today = ARGV[1].to_b
+  end
 end
+
 if day < 1 || day > 5
   puts "Day must be between 1 and 5"
   exit 1
@@ -29,7 +40,7 @@ begin
   brodernas = BrodernasPage.new(PageReader.new())
   pages = [ husman, chili, cominn, brodernas ]
   pages.each { |page| page.read_tmp_page() }
-  puts HtmlGenerator.new(pages, day).html()
+  puts HtmlGenerator.new(pages, day, today).html()
 rescue => error
   File.open("/tmp/food_parser.log", 'a') do |file|
     backtrace = error.backtrace.join("\n")

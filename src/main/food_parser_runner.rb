@@ -19,7 +19,3 @@ food_parser = factory.create_food_parser()
   puts food_parser.get_text_for(i)
   sleep 1
 end
-
-
-
-

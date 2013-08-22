@@ -27,3 +27,6 @@
         %script{:type => 'text/javascript'}
           loadCheckedRestaurants();
           storeCheckedRestaurants();
+      - if @today
+        %div{:id => 'next_day'}
+          %a{:href => 'imorgon.html'} Morgondagens lunch
