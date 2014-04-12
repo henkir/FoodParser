@@ -5,10 +5,9 @@ require 'haml'
 module FoodParser
   class HtmlGenerator
 
-    def initialize(pages, day, today)
+    def initialize(pages, day)
       @pages = pages
       @day = day
-      @today = today
       @html = generate_html()
     end
 

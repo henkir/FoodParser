@@ -8,14 +8,10 @@ class String
 end
 
 day = -1
-today = true
 if ARGV.length == 0
   day = Time.new.wday
 else
   day = ARGV[0].to_i
-  if ARGV.length >= 2
-    today = ARGV[1].to_b
-  end
 end
 
 if day < 1 || day > 5
@@ -37,7 +33,7 @@ begin
   menues = main_page.read_page()
   menues.each { |title, menu| pages.push(GenericFoodPage.new(title, menu)) }
   pages = pages.sort
-  puts HtmlGenerator.new(pages, day, today).html()
+  puts HtmlGenerator.new(pages, day).html()
 rescue => error
   File.open("/tmp/food_parser.log", 'a') do |file|
     backtrace = error.backtrace.join("\n")
