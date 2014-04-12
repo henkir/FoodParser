@@ -1,5 +1,9 @@
 class String
 
+  def replace_br_tags()
+    gsub(/<br[^>]*>/, "\n")
+  end
+
   def strip_tags()
     gsub(/<[^>]*>/, "")
   end
@@ -9,6 +13,10 @@ class String
     gsub!(/[\t\ ]{2,}/, " ")
     gsub!(/\t/, " ")
     gsub(/\s{2,}/, "\n")
+  end
+
+  def replace_characters()
+    gsub("&amp;", "&").gsub("\u001E", "&").gsub("&nbsp;", " ")
   end
 
 end

@@ -24,22 +24,19 @@ if day < 1 || day > 5
 end
 
 require 'food_parser_factory'
-require 'husman_page'
-require 'chili_page'
-require 'cominn_page'
-require 'brodernas_page'
+require 'generic_food_page'
+require 'main_page'
 require 'page_reader'
 require 'html_generator'
 
 include FoodParser
 
 begin
-  husman = HusmanPage.new(PageReader.new())
-  chili = ChiliPage.new(PageReader.new())
-  cominn = ComInnPage.new(PageReader.new())
-  brodernas = BrodernasPage.new(PageReader.new())
-  pages = [ husman, chili, cominn, brodernas ]
-  pages.each { |page| page.read_tmp_page() }
+  pages = []
+  main_page = MainPage.new(PageReader.new())
+  menues = main_page.read_page()
+  menues.each { |title, menu| pages.push(GenericFoodPage.new(title, menu)) }
+  pages = pages.sort
   puts HtmlGenerator.new(pages, day, today).html()
 rescue => error
   File.open("/tmp/food_parser.log", 'a') do |file|

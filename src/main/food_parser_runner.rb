@@ -6,6 +6,7 @@ require 'husman_page'
 require 'chili_page'
 require 'cominn_page'
 require 'brodernas_page'
+require 'main_page'
 require 'page_reader'
 
 include FoodParser

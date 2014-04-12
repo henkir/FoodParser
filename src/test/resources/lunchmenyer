@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv-se" lang="sv-se">
+<head>
+     <base href="http://www.mjardevi.se/service/restauranger/lunchmenyer" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=EmulateIE7" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Gluten, Potatis, Veg, Serveras, Kokt, Eller, Cashewnötter, Samt, Grönsaker, Dagens, Wokade, Tomat, Bakad, Citron, Fisk, Currysås, Anpassning, Smaksatt, Potatismos, Dill, –, Pork, Pasta, Bacon, Restaurang" />
+  <meta name="title" content="Lunchguiden" />
+  <meta name="author" content="Administrator" />
+  <meta name="description" content="Lunchguiden Lunchguide 09/04(Visa meny f�r imorgon �) Br�dernas K�k Hemsida Chili & Lime kalvfärsbiff med kantarellsås & lingon, serveras med pot..." />
+  <meta name="generator" content="LemonLime.se" />
+  <title>Lunchguiden | Mjärdevi Science Park</title>
+  <link href="/templates/mjardevi_template/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+  <script type="text/javascript" src="/modules/mod_accordionmenu/assets/accordionmenu.js"></script>
+   
+   <link rel="stylesheet" href="/templates/mjardevi_template/css/template.css" type="text/css" />	 
+   <link rel="stylesheet" href="/templates/mjardevi_template/css/screen.css" type="text/css" />
+      <!--[if IE]><link rel="stylesheet" href="/templates/mjardevi_template/css/ie.css" type="text/css"><![endif]-->    
+   <script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   </script>
+   <script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-11135567-1");
+		pageTracker._trackPageview();
+	} catch(err) {}
+   </script>
+</head>
+<body>
+    <div class="container" id="wrapper">
+		<div class="span-12" id="header">
+			<div class="span-12 last" id="top">		<div class="moduletable_search">
+					
+<form action="index.php"  method="post" class="search_search">
+<fieldset>
+	<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Sök" class="inputbox_search" type="text" size="20" value="Sök.."  onblur="if(this.value=='') this.value='Sök..';" onfocus="if(this.value=='Sök..') this.value='';" />	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="task"   value="search" />
+</fieldset>
+</form>
+
+		</div>
+			<div class="moduletable_lang">
+					<div id="jflanguageselection"><ul class="jflanguageselection"><li id="active_language"><a href="http://www.mjardevi.se/sv/service/restauranger/lunchmenyer"><img src="/components/com_joomfish/images/flags/sv.gif" alt="Svenska (Sverige)" title="Svenska (Sverige)" /></a></li><li><a href="http://www.mjardevi.se/en/service/restaurants/lunch-menues"><img src="/components/com_joomfish/images/flags/en.gif" alt="English (United Kingdom & USA)" title="English (United Kingdom & USA)" /></a></li></ul></div><!--Joom!fish V2.0.4 (Lightning)-->
+<!-- &copy; 2003-2009 Think Network, released under the GPL. -->
+<!-- More information: at http://www.joomfish.net -->
+		</div>
+	</div>
+			<div class="span-3"><h1 id="logo" onclick="location.href='/index.php';" title="Mjärdevi Science Park">Mjärdevi Science Park</h1></div>
+			<div class="span-9 last">		<div class="moduletable_menu">
+					<ul class="menu" id="mainmenu"><li class="item1"><a href="http://www.mjardevi.se/"><span>Home</span></a></li><li class="parent item3"><a href="/sv/om-mjardevi"><span>Om Mjärdevi</span></a></li><li class="parent active item2"><a href="/sv/service"><span>Service</span></a><ul><li class="parent active item37"><a href="/sv/service/restauranger"><span>Restauranger</span></a><ul><li id="current" class="active item38"><a href="/sv/service/restauranger/lunchmenyer"><span>Lunchmenyer</span></a></li></ul></li><li class="item107"><a href="/sv/service/advokater-och-patentbyraer"><span>Advokater och patentbyråer</span></a></li><li class="item46"><a href="/sv/service/arbetslivspastor"><span>Arbetslivspastor</span></a></li><li class="item108"><a href="/sv/service/bokfoering"><span>Bokföring</span></a></li><li class="item129"><a href="/sv/service/elektronikkonsulter"><span>Elektronikkonsulter</span></a></li><li class="item122"><a href="/sv/service/flygfoerbindelser"><span>Flygförbindelser</span></a></li><li class="item43"><a href="/sv/service/friskvard"><span>Friskvård</span></a></li><li class="item45"><a href="/sv/service/forskola"><span>Förskola</span></a></li><li class="item42"><a href="/sv/service/frisorer"><span>Frisörer</span></a></li><li class="item126"><a href="/sv/service/foretagsutveckling"><span>Företagsutveckling och utbildning</span></a></li><li class="item121"><a href="/sv/service/golfbana"><span>Golfbana</span></a></li><li class="item131"><a href="/sv/service/hyrbilar"><span>Hyrbilar</span></a></li><li class="item133"><a href="/sv/service/it-service"><span>IT-service</span></a></li><li class="item47"><a href="/sv/service/konfereslokaler"><span>Konferenslokaler</span></a></li><li class="item92"><a href="/sv/service/kontorslokaler"><span>Kontorslokaler</span></a></li><li class="parent item109"><a href="/sv/service/lediga-jobb"><span>Lediga jobb</span></a></li><li class="item39"><a href="/sv/service/livsmedel"><span>Livsmedel</span></a></li><li class="item128"><a href="/sv/service/mjaerdevi-science-park-ab"><span>Mjärdevi Science Park AB</span></a></li><li class="item102"><a href="/sv/service/naetverk"><span>Nätverk</span></a></li><li class="item36"><a href="/sv/service/parkering"><span>Parkering</span></a></li><li class="item40"><a href="/sv/service/post"><span>Post</span></a></li><li class="item127"><a href="/sv/service/reklambyra"><span>Reklambyrå</span></a></li><li class="item71"><a href="/sv/service/soft-landing"><span>Soft Landing</span></a></li><li class="item69"><a href="/sv/service/sakerhet"><span>Säkerhet</span></a></li><li class="item130"><a href="/sv/service/taxi-och-limousine"><span>Taxi och limousine</span></a></li><li class="item48"><a href="/sv/service/universitet"><span>Universitet</span></a></li><li class="item119"><a href="/sv/service/utbildningslokaler"><span>Utbildningslokaler</span></a></li><li class="item41"><a href="/sv/service/uttagsautomat"><span>Uttagsautomat</span></a></li><li class="item118"><a href="/sv/service/videokonferens"><span>Videokonferens</span></a></li><li class="item112"><a href="/sv/service/mjaerdevistafetten-2013"><span>Mjärdevistafetten 2013</span></a></li><li class="item113"><a href="/sv/service/mjaerdevi-science-park-golf-2014"><span>Mjärdevi Science Park Golf 2014</span></a></li></ul></li><li class="item6"><a href="/sv/foretagen"><span>Företagen</span></a></li><li class="item8"><a href="/sv/faq"><span>FAQ</span></a></li><li class="parent item4"><a href="http://www.mynewsdesk.com/se/pressroom/mjardevi-science-park"><span>Press</span></a></li><li class="parent item5"><a href="/sv/kontakt"><span>Kontakt</span></a></li></ul>		</div>
+	</div>
+		</div>		
+						
+						
+				<div class="span-12" id="presentation">		<div class="moduletable">
+					<div class="bannergroup">
+
+<div class="banneritem"><img src="http://www.mjardevi.se/images/banners/banner_restaurant.jpg" alt="Annons" /><div class="clr"></div>
+	</div>
+
+</div>		</div>
+	</div>
+				<hr class="space" />	
+				<div class="span-12" id="breadcrumbs">
+                <div id="breadcrumbs-left"><span class="breadcrumbs pathway">
+<a href="http://www.mjardevi.se/" class="pathway">Hem</a> &raquo; <a href="/sv/service" class="pathway">Service</a> &raquo; <a href="/sv/service/restauranger" class="pathway">Restauranger</a> &raquo; Lunchmenyer</span>
+</div>
+                <div id="breadcrumbs-right"><!-- AddThis Button BEGIN -->
+<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e9295a536621f25"><img src="http://s7.addthis.com/static/btn/v2/lg-share-sv.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+<a class="addthis_button_google_plusone"></a>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9295a536621f25"></script>
+<!-- AddThis Button END --></div></div>
+				<div class="span-3" id="sidebar-left">		<div class="moduletable_sidebar-menu">
+						
+<script type="text/javascript">
+	window.addEvent('domready', function(){
+	accordionMenu(
+		"verticalmenu", // Menu Tag ID (this id is assigned to menu parent ul tag)
+		"", //path to image used to expand menu item
+		"", //path to image used to collapse menu item
+		{duration:400, transition:Fx.Transitions.Quart.easeOut}, // (optional argument) custom accordion options to override defaults, use null if you want to set next argument without changing this
+		200, // (optional argument) hover delay in milliseconds over "parent menu item" to open its sublevels, default is 200
+		0 // (optional argument) enable/disable opening of submenus on hovering
+	);
+	
+	});
+</script>
+
+<ul class="menu" id="verticalmenu"><li class="parent active item37"><a href="/sv/service/restauranger"><span>Restauranger</span></a><ul><li id="current" class="active item38"><a href="/sv/service/restauranger/lunchmenyer"><span>Lunchmenyer</span></a></li></ul></li><li class="item107"><a href="/sv/service/advokater-och-patentbyraer"><span>Advokater och patentbyråer</span></a></li><li class="item46"><a href="/sv/service/arbetslivspastor"><span>Arbetslivspastor</span></a></li><li class="item108"><a href="/sv/service/bokfoering"><span>Bokföring</span></a></li><li class="item129"><a href="/sv/service/elektronikkonsulter"><span>Elektronikkonsulter</span></a></li><li class="item122"><a href="/sv/service/flygfoerbindelser"><span>Flygförbindelser</span></a></li><li class="item43"><a href="/sv/service/friskvard"><span>Friskvård</span></a></li><li class="item45"><a href="/sv/service/forskola"><span>Förskola</span></a></li><li class="item42"><a href="/sv/service/frisorer"><span>Frisörer</span></a></li><li class="item126"><a href="/sv/service/foretagsutveckling"><span>Företagsutveckling och utbildning</span></a></li><li class="item121"><a href="/sv/service/golfbana"><span>Golfbana</span></a></li><li class="item131"><a href="/sv/service/hyrbilar"><span>Hyrbilar</span></a></li><li class="item133"><a href="/sv/service/it-service"><span>IT-service</span></a></li><li class="item47"><a href="/sv/service/konfereslokaler"><span>Konferenslokaler</span></a></li><li class="item92"><a href="/sv/service/kontorslokaler"><span>Kontorslokaler</span></a></li><li class="parent item109"><a href="/sv/service/lediga-jobb"><span>Lediga jobb</span></a><ul><li class="item110"><a href="/sv/service/lediga-jobb/laegg-in-jobb"><span>Lägg in jobb</span></a></li></ul></li><li class="item39"><a href="/sv/service/livsmedel"><span>Livsmedel</span></a></li><li class="item128"><a href="/sv/service/mjaerdevi-science-park-ab"><span>Mjärdevi Science Park AB</span></a></li><li class="item102"><a href="/sv/service/naetverk"><span>Nätverk</span></a></li><li class="item36"><a href="/sv/service/parkering"><span>Parkering</span></a></li><li class="item40"><a href="/sv/service/post"><span>Post</span></a></li><li class="item127"><a href="/sv/service/reklambyra"><span>Reklambyrå</span></a></li><li class="item71"><a href="/sv/service/soft-landing"><span>Soft Landing</span></a></li><li class="item69"><a href="/sv/service/sakerhet"><span>Säkerhet</span></a></li><li class="item130"><a href="/sv/service/taxi-och-limousine"><span>Taxi och limousine</span></a></li><li class="item48"><a href="/sv/service/universitet"><span>Universitet</span></a></li><li class="item119"><a href="/sv/service/utbildningslokaler"><span>Utbildningslokaler</span></a></li><li class="item41"><a href="/sv/service/uttagsautomat"><span>Uttagsautomat</span></a></li><li class="item118"><a href="/sv/service/videokonferens"><span>Videokonferens</span></a></li><li class="item112"><a href="/sv/service/mjaerdevistafetten-2013"><span>Mjärdevistafetten 2013</span></a></li><li class="item113"><a href="/sv/service/mjaerdevi-science-park-golf-2014"><span>Mjärdevi Science Park Golf 2014</span></a></li></ul>		</div>
+			<div class="moduletable_sidebar-menu">
+						
+<script type="text/javascript">
+	window.addEvent('domready', function(){
+	accordionMenu(
+		"verticalmenu", // Menu Tag ID (this id is assigned to menu parent ul tag)
+		"", //path to image used to expand menu item
+		"", //path to image used to collapse menu item
+		{duration:400, transition:Fx.Transitions.Quart.easeOut}, // (optional argument) custom accordion options to override defaults, use null if you want to set next argument without changing this
+		200, // (optional argument) hover delay in milliseconds over "parent menu item" to open its sublevels, default is 200
+		0 // (optional argument) enable/disable opening of submenus on hovering
+	);
+	
+	});
+</script>
+
+<ul class="menu" id="verticalmenu"><li class="parent active item37"><a href="/sv/service/restauranger"><span>Restauranger</span></a><ul><li id="current" class="active item38"><a href="/sv/service/restauranger/lunchmenyer"><span>Lunchmenyer</span></a></li></ul></li><li class="item107"><a href="/sv/service/advokater-och-patentbyraer"><span>Advokater och patentbyråer</span></a></li><li class="item46"><a href="/sv/service/arbetslivspastor"><span>Arbetslivspastor</span></a></li><li class="item108"><a href="/sv/service/bokfoering"><span>Bokföring</span></a></li><li class="item129"><a href="/sv/service/elektronikkonsulter"><span>Elektronikkonsulter</span></a></li><li class="item122"><a href="/sv/service/flygfoerbindelser"><span>Flygförbindelser</span></a></li><li class="item43"><a href="/sv/service/friskvard"><span>Friskvård</span></a></li><li class="item45"><a href="/sv/service/forskola"><span>Förskola</span></a></li><li class="item42"><a href="/sv/service/frisorer"><span>Frisörer</span></a></li><li class="item126"><a href="/sv/service/foretagsutveckling"><span>Företagsutveckling och utbildning</span></a></li><li class="item121"><a href="/sv/service/golfbana"><span>Golfbana</span></a></li><li class="item131"><a href="/sv/service/hyrbilar"><span>Hyrbilar</span></a></li><li class="item133"><a href="/sv/service/it-service"><span>IT-service</span></a></li><li class="item47"><a href="/sv/service/konfereslokaler"><span>Konferenslokaler</span></a></li><li class="item92"><a href="/sv/service/kontorslokaler"><span>Kontorslokaler</span></a></li><li class="parent item109"><a href="/sv/service/lediga-jobb"><span>Lediga jobb</span></a><ul><li class="item110"><a href="/sv/service/lediga-jobb/laegg-in-jobb"><span>Lägg in jobb</span></a></li></ul></li><li class="item39"><a href="/sv/service/livsmedel"><span>Livsmedel</span></a></li><li class="item128"><a href="/sv/service/mjaerdevi-science-park-ab"><span>Mjärdevi Science Park AB</span></a></li><li class="item102"><a href="/sv/service/naetverk"><span>Nätverk</span></a></li><li class="item36"><a href="/sv/service/parkering"><span>Parkering</span></a></li><li class="item40"><a href="/sv/service/post"><span>Post</span></a></li><li class="item127"><a href="/sv/service/reklambyra"><span>Reklambyrå</span></a></li><li class="item71"><a href="/sv/service/soft-landing"><span>Soft Landing</span></a></li><li class="item69"><a href="/sv/service/sakerhet"><span>Säkerhet</span></a></li><li class="item130"><a href="/sv/service/taxi-och-limousine"><span>Taxi och limousine</span></a></li><li class="item48"><a href="/sv/service/universitet"><span>Universitet</span></a></li><li class="item119"><a href="/sv/service/utbildningslokaler"><span>Utbildningslokaler</span></a></li><li class="item41"><a href="/sv/service/uttagsautomat"><span>Uttagsautomat</span></a></li><li class="item118"><a href="/sv/service/videokonferens"><span>Videokonferens</span></a></li><li class="item112"><a href="/sv/service/mjaerdevistafetten-2013"><span>Mjärdevistafetten 2013</span></a></li><li class="item113"><a href="/sv/service/mjaerdevi-science-park-golf-2014"><span>Mjärdevi Science Park Golf 2014</span></a></li></ul>		</div>
+	</div>
+				<div class="span-6" id="content"><h2>Lunchguiden</h2>
+
+
+
+
+<div class="article-tools">
+	<div class="article-meta">
+	
+	
+		</div>
+
+		<div class="buttonheading">
+								<span>
+			<a href="/sv/component/mailto/?tmpl=component&amp;link=aHR0cDovL3d3dy5tamFyZGV2aS5zZS9zdi9zZXJ2aWNlL3Jlc3RhdXJhbmdlci9sdW5jaG1lbnllcg%3D%3D" title="Skicka sidan" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;"><img src="/images/M_images/emailButton.png" alt="Skicka sidan"  /></a>			</span>
+			
+						<span>
+			<a href="/sv/service/restauranger/lunchmenyer?tmpl=component&amp;print=1&amp;page=" title="Skriv ut" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><img src="/images/M_images/printButton.png" alt="Skriv ut"  /></a>			</span>
+			
+						<span>
+			<a href="/sv/service/restauranger/lunchmenyer?format=pdf" title="PDF" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><img src="/images/M_images/pdf_button.png" alt="PDF"  /></a>			</span>
+						</div>
+	
+	</div>
+
+
+<div class="article-content">
+<p> 
+<div class="lunchMeny"><h3>Lunchguide 09/04</h3>(<a href="/sv/service/restauranger/lunchmenyer/42">Visa meny f&ouml;r imorgon&nbsp;&raquo;</a>)<hr class="space" />
+
+<h4 title="Teknikringen 10, Mj&auml;rdevi Center">Br&ouml;dernas K&ouml;k</h4>
+
+<p><a href="http://www.br&ouml;dernask&ouml;k.se" target="_blank">Hemsida</a></p>
+
+<h4 title="Teknikringen 10">Chili & Lime</h4>
+
+<p>
+    
+        
+            kalvfärsbiff med kantarellsås & lingon, serveras med potatismos eller kokt potatis (gluten)
+            <br>
+          
+          fiskgratäng italiano (tomat & mozzarella), serveras med kokt potatis
+          <br>
+          
+          veckans fisk: räkfylld rödspättafilé med västkustdressing, serveras med kokt potatis & citron (gluten)
+          <br>
+          
+          thailändsk gröncurry-kyckling med cashewnötter
+          <br>
+          
+          friterat fläskkött med sötsur sås eller currysås (gluten)
+          <br>
+          
+          kombo (dagens 4 + 5) (gluten)
+            <br>
+          
+          veg 1:	wokade grönsaker med cashewnötter  veg 2:	wokade äggnudlar med grönsaker,  		samt vårrulle & jordnötssås (gluten)  veg 3:	samosa-knyten (grönsaksfyllda) med lättwokade grönsaker & currysås
+          <br>
+          
+
+</p>
+
+<p><a href="http://chili-lime.se" target="_blank">Hemsida</a></p>
+
+<h4 title="Teknikringen 7">Collegium</h4>
+
+<p>
+<br>Korvgryta av tomat, bbqs&aring;s, grillad paprika och l&ouml;k &nbsp;&nbsp;
+<br>
+    &nbsp;kr&auml;mig Gr&ouml;n&auml;rt och broccolisoppa med kr&auml;ftstj&auml;rtar i dill&nbsp;
+<br>
+<br>Nattkokad kalvh&ouml;grev i bit med bakad r&ouml;dl&ouml;k samt r&ouml;dvinssky smaksatt med ramsl&ouml;k och pepparrot &nbsp;Byts m&ouml;jligtvis under dagen till...&nbsp;Nattstekt bogrulle av black angus med &quot;pesto&quot; av svartk&aring;l och pinjen&ouml;tter samt skys&aring;s &nbsp;&nbsp; 
+<br>
+    &nbsp;Bakad sejfil&eacute; med ansjovisgr&auml;dde och morotspur&eacute; smaksatt med citron och brynt sm&ouml;r &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</p>
+
+<p><a href="http://www.collegium.nu" target="_blank">Hemsida</a></p>
+
+<h4 title="Teknikringen 7">Com.Inn</h4>
+
+<p>Dagens Buffé:<br>Pizzor: Biffig Pizza (med Lök, Bearnaise &amp; Entrecôte), Kebab, Kyckling, Prosciutto, Salami eller Veg med Pimpad Pizzasallad &amp; andra Lämpliga Tillbehör<br>Kycklingkebab-gryta med Vitlöksbröd &amp; Brieostdipp<br>Pulled Pork Pasta- med såsiga Champinjoner &amp; riven Ost<br>Fläskig Hoi Sin Wok<br>Lättwokade Grönsaker<br>Dagens GI anpassning &#8211; Matvete<br>Dagens LCHF anpassning &#8211; Ost-stuvad Vitkål<br>Dagens Potatis - Rostad Persiljepotatis<br>Jasminris<br>På språng? Ring 013-363836 &amp; beställ din Take Away Låda så är den klar att hämta upp i Kiosken på avtalad tid. 75:- inkl. Sallad &amp; 33cl Burkdricka.<br>
+</p>
+
+<p><a href="http://www.cominn.nu" target="_blank">Hemsida</a></p>
+
+<h4 title="Universitetsv&auml;gen, Link&ouml;pings Golfklubb">P2 Restaurang</h4>
+
+<p>
+    
+Fisk- och skaldjursgryta med örtaioli<br>
+Köttfärslimpa med skogssvampsås<br>
+Varmrökt lax med kall dill- och romsås<br>
+Levergryta med bacon och smålök<br>
+Falafel med rostade rotsaker och kikärtscreme<br>
+Räksallad med sparris och ägg<br>
+Kycklingsallad med Caesardressing<br>
+</p>
+
+<p><a href="http://www.p2g.se/" target="_blank">Hemsida</a></p>
+
+<h4 title="Teknikringen 8">Husman</h4>
+
+<p>
+    Pannbiff med potatismos, kantarellsås & lingon<br> 
+Sesambakad laxfilé med wasabicreme & broccoli<br> 
+Spaghetti Carbonara (bacon)<br>
+
+Veg:Grönsakswok med quorn & cashewnötter  <br> 
+Wok:Kyckling med thai basilika & ingefära<br>
+Grill:Hamburgare med bröd & pommes<br>
+Grill:Kebabtallrik med pommes & tillbehör<br>
+</p>
+
+<p><a href="http://www.restauranghusman.se" target="_blank">Hemsida</a></p>
+
+<h4 title="Universitetsv&auml;gen 14, Intentiahuset">Restaurang Vita Huset</h4>
+
+<p>Pulled pork – Pickels - Coleslaw<br>Hemgjord pasta – Skaldjur - Hummersås<br>
+</p>
+
+<p><a href="http://www.laroverken.se/linkoping/linkoping/omskolor/omskolan/restaurang" target="_blank">Hemsida</a></p>
+
+</div></p></div>
+
+
+<span class="article_separator">&nbsp;</span>
+</div>
+				<div class="span-3 last" id="sidebar-right">		<div class="moduletable_kalendarium-extra">
+							<h2>Kalendarium</h2>
+						<table class="mod_events_latest_table" width="100%" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td class="mod_events_latest_first"><span class="mod_events_latest_date"> 9 april</span> <br /><span class="mod_events_latest_content"><a href="/sv/om-mjardevi/kalendarium/icalrepeat.detail/2014/04/09/1082/20|21|18/YjlmZjQ5ZDI2YmMxNTEyNmM1ZTVkYzRiNzE2YmY0ZDk=">Frukostseminarium: Kognitionsvetenskap till nytta för IT-företag</a></span></td></tr>
+<tr><td class="mod_events_latest"><span class="mod_events_latest_date">10 april</span> <br /><span class="mod_events_latest_content"><a href="/sv/om-mjardevi/kalendarium/icalrepeat.detail/2014/04/10/1065/20|21|18/YzU2ODkwYzVhNWY5N2Q0ZmU0MmZiMWU2MTEwZjliMTU=">Snart är allt och alla uppkopplade!</a></span></td></tr>
+<tr><td class="mod_events_latest"><span class="mod_events_latest_date">12 april</span><br /><span class="mod_events_latest_content"><a href="/sv/om-mjardevi/kalendarium/icalrepeat.detail/2014/04/12/1056/20|21|18/MTlkNjM3YzEzM2RkY2U5MmU1NDE3Njg1ZTZmZGM3NWU=">International Space Apps Challenge</a></span></td></tr>
+</table>
+<div class="mod_events_latest_callink"><a href="/sv/om-mjardevi/kalendarium/year.listevents/2014/04/09/20|21|18">Visa stor kalender</a></div>		</div>
+			<div class="moduletable_extra">
+							<h2>Senaste Nytt</h2>
+						<ul class="latestnews_extra">
+	<li class="latestnews_extra">
+	 9.04.2014<a href="/sv/om-mjardevi/nyhetsarkiv/1278-kognitionsfrukost-pa-creactive" class="latestnews_extra">Kognitionsfrukost på creActive</a>
+	</li>
+	<li class="latestnews_extra">
+	 7.04.2014<a href="/sv/om-mjardevi/nyhetsarkiv/1277-cybaero-far-kinesisk-bestaellning" class="latestnews_extra">CybAero får kinesisk beställning</a>
+	</li>
+	<li class="latestnews_extra">
+	 3.04.2014<a href="/sv/om-mjardevi/nyhetsarkiv/1275-lyssna-pa-mjaerdevis-framtid" class="latestnews_extra">Lyssna på Mjärdevis framtid</a>
+	</li>
+	<li class="latestnews_extra">
+	 2.04.2014<a href="/sv/om-mjardevi/nyhetsarkiv/1274-sp-devices-slaepper-ny-digitaliserare" class="latestnews_extra">SP Devices släpper ny digitaliserare</a>
+	</li>
+	<li class="latestnews_extra">
+	 2.04.2014<a href="/sv/om-mjardevi/nyhetsarkiv/1273-nominera-till-polhemspriset" class="latestnews_extra">Nominera till Polhemspriset</a>
+	</li>
+</ul>		</div>
+	</div>
+							<hr class="space" />
+		<div class="span-12 last" id="footer">
+			<div class="span-6">		<div class="moduletable_footer">
+					<p>Mjärdevi Science Park AB, Teknikringen 10, 583 30 Linköping  Tel 013-20 57 57 <br />Fax 013-21 01 76 <a href="mailto:info@mjardevi.se">info (at) mjardevi.se</a> © Copyright Mjärdevi Science Park</p>
+<p><a target="_blank" href="https://www.facebook.com/MjardeviSciencePark" style="font-size: 14px; line-height: 17px;"><img alt="facebook" height="37" width="36" src="/images/stories/loggor/facebook.jpg" style="margin: 3px;" /></a><a target="_blank" href="https://twitter.com/#!/Mjardevi" style="font-size: 14px; line-height: 17px;"><img alt="twitter" height="37" width="37" src="/images/stories/loggor/twitter.jpg" style="margin: 3px;" /></a>&nbsp;</p>		</div>
+	</div>
+			<div class="span-6 last">		<div class="moduletable_footer">
+					<p class="buttons_row"><a target="_blank" href="http://www.sisp.se/"><img src="/images/stories/footer-logos/sisp_logo.jpg" width="100" height="58" alt="sisp_logo" /></a><a href="http://ec.europa.eu/regional_policy/funds/feder/index_sv.htm"><img alt="eulogo_inv_c_rgb" height="86" width="135" src="/images/stories/loggor/eulogo_inv_c_rgb.jpg" style="vertical-align: top; margin: 10px;" /></a><a href="http://www.iasp.ws/publico/intro.jsp"><img src="/images/stories/loggor/iasp_logo.jpg" width="116" height="45" alt="iasp_logo" /></a></p>		</div>
+	</div>
+		</div>				
+   </div><!-- end of wrapper -->
+   	<script src="/templates/mjardevi_template/js/scripts.js" type="text/javascript"></script>
+  </body>
+</html>
