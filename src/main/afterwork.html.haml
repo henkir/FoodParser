@@ -1,0 +1,21 @@
+!!! 5
+%html
+  %head
+    %title= get_title()
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=UTF-8'}/
+    %meta{'name' => 'HandheldFriendly', :content => 'True'}/
+    %link{'href' => 'style.css', 'rel' => 'stylesheet', 'type' => 'text/css'}/
+    %script{:type => 'text/javascript', :src => 'script.js'}
+  %body
+    %div
+      %div{:id => 'choose'}
+        %h2=get_randomize_title()
+        %form
+          - @pages.each do |page|
+            %input{:type => 'checkbox', :checked => 'checked', :value => "#{page.get_name()}", :onclick => 'storeCheckedRestaurants()'} #{page.get_name()}
+            %br
+        %button{:onclick => 'randomizeRestaurant()'} Slumpa
+        %div{:id => 'chosen'}
+        %script{:type => 'text/javascript'}
+          loadCheckedRestaurants();
+          storeCheckedRestaurants();
