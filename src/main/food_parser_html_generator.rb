@@ -31,7 +31,11 @@ begin
   pages = []
   main_page = MainPage.new(PageReader.new())
   menues = main_page.read_page()
-  menues.each { |title, menu| pages.push(GenericFoodPage.new(title, menu)) }
+  menues.each do |title, menu|
+    if !menu.empty?
+      pages.push(GenericFoodPage.new(title, menu))
+    end
+  end
   pages = pages.sort
   puts HtmlGenerator.new(pages, day).html()
 rescue => error
