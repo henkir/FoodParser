@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 class String
@@ -26,7 +27,7 @@ include FoodParser
 
 begin
   pages = []
-  afterworks = ["Harrys", "Pitchers", "Horse & Hound", "Bishops", "Nationernas Hus"]
+  afterworks = ["Harrys", "Pitchers", "Horse & Hound", "Bishops", "Nationernas Hus", "De Klomp", "Överste Mörner", "Bar BQ", "Storan"]
   afterworks.each { |aw| pages.push(GenericFoodPage.new(aw, "")) }
   puts AfterworkHtmlGenerator.new(pages, day).html()
 rescue => error
