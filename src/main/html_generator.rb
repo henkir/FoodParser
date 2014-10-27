@@ -26,7 +26,10 @@ module FoodParser
     def get_title()
       days = ["Söndag", "Måndag", "Tisdag", "Onsdag",
              "Torsdag", "Fredag", "Lördag"]
-      "Lunch #{days[@day]}"
+      months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli",
+                "Augusti", "September", "Oktober", "November", "December"]
+      time = Time.now
+      "Lunch #{days[@day]} #{time.mday} #{months[time.month - 1]}"
     end
 
     def get_randomize_title()
