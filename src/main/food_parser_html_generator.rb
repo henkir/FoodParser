@@ -32,7 +32,7 @@ begin
   main_page = MainPage.new(PageReader.new())
   menues = main_page.read_page()
   menues.each do |title, menu|
-    if !menu.empty?
+    if !menu.nil? && !menu.empty?
       pages.push(GenericFoodPage.new(title, menu))
     end
   end
