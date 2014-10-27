@@ -16,7 +16,7 @@ module FoodParser
     end
 
     def get_array_for(day)
-      @menu.split("\n")
+      @menu.split("\n").map { |e| e.capitalize }
     end
 
     def <=>(other)
