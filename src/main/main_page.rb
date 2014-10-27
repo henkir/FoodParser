@@ -7,7 +7,7 @@ module FoodParser
 
     def initialize(page_reader)
       @page_reader = page_reader
-      @url = "http://www.mjardevi.se/guiden"
+      @url = "http://www.mjardevi.se/sv/guiden"
     end
 
     def read_page()
