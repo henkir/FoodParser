@@ -39,7 +39,7 @@ module FoodParser
 
     def remove_every_other_element(array)
       n = 2
-      (n - 1).step(array.size - 1, n).map { |i| array[i] }
+      0.step(array.size - 1, n).map { |i| array[i] }
     end
 
   end
