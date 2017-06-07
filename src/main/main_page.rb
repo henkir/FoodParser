@@ -33,8 +33,8 @@ module FoodParser
     end
 
     def get_menues(content)
-      menues = content.css('li')
-      menues = menues.map { |i| i.to_s.replace_br_tags.strip_tags.consolidate_whitespace.replace_characters.strip }
+      menues = content.css('ul').map { |ul| ul.css('li')}
+      menues = menues.map { |i| i.to_s.gsub('</h5>', '</h5>: ').replace_br_tags.strip_tags.consolidate_whitespace.replace_characters.strip }
     end
 
     def remove_every_other_element(array)
