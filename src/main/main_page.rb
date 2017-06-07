@@ -7,7 +7,7 @@ module FoodParser
 
     def initialize(page_reader)
       @page_reader = page_reader
-      @url = "http://www.mjardevi.se/sv/guiden"
+      @url = "http://www.mjardevi.se/lunch-menu"
     end
 
     def read_page()
@@ -25,15 +25,15 @@ module FoodParser
     end
 
     def get_content()
-      @page.css('div[class="lunchMeny"]')
+      @page.css('div[class="gaia-lunch-menu-wrapper"]')
     end
 
     def get_titles(content)
-      content.css('h4').map { |v| v.text }
+      content.css('h4[class="title"]').map { |v| v.text }
     end
 
     def get_menues(content)
-      menues = remove_every_other_element(content.css('p'))
+      menues = content.css('li')
       menues = menues.map { |i| i.to_s.replace_br_tags.strip_tags.consolidate_whitespace.replace_characters.strip }
     end
 
